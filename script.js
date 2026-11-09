@@ -27,7 +27,7 @@ const destinations = [
         title: "Tokyo City",
         description: "Immerse yourself in a vibrant metropolis blending deep tradition with modern tech.",
         price: 1599,
-        image: "/assets/tokyo.jpg",
+        image: "assets/tokyo.jpg",
     }
 ];
 
@@ -84,25 +84,12 @@ const handleBookNowClick = (event) => {
     document.querySelector('.featured-section').scrollIntoView({ behavior: 'smooth' });
 };
 
-// --- Sorting Function ---
-
-// Sorts destinations by price (low to high)
-const sortByPrice = (arr) => {
-    // Create a copy to avoid mutating the original array
-    const sortedArr = [...arr];
-    return sortedArr.sort((a, b) => a.price - b.price);
-};
-
 // --- Initialization ---
 
 const init = () => {
-    // 1. Sort the data by price (Simple sort variable)
-    const sortedDestinations = sortByPrice(destinations);
+    // Keep the curated destination sequence from the data.
+    renderDestinations(destinations);
 
-    // 2. Render the list
-    renderDestinations(sortedDestinations);
-
-    // 3. Attach Event Listeners
     destinationList.addEventListener('click', handleCardClick);
     bookNowBtn.addEventListener('click', handleBookNowClick);
 };
