@@ -30,6 +30,7 @@ body {
   color: #064882; /* Deep navy blue */
   text-decoration: none;
   letter-spacing: -0.5px;
+  padding-left: 40px;
 }
 
 /* Navigation List */
@@ -37,14 +38,14 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 36px; /* Exact spacing between Home, About, Destinations, and Book Now */
+  gap: 60px; /* Exact spacing between Home, About, Destinations, and Book Now */
 }
 
 /* Standard Nav Links */
 .nav-links a {
   text-decoration: none;
   color: #333333;
-  font-size: 0.95rem;
+  font-size: 1.5rem;
   font-weight: 400;
   padding-bottom: 6px;
   transition: color 0.2s ease;
@@ -67,10 +68,11 @@ body {
   color: #ffffff;
   font-weight: 500;
   font-size: 0.9rem;
-  padding: 10px 28px;
+  padding: 10px 0px;
+  padding-right: 50px;
   border-radius: 999px; /* Full pill shape */
   border-bottom: none;
-  margin-left: 12px; /* Extra breathing room before the button */
+  margin-left: 50px; /* Extra breathing room before the button */
   transition: background-color 0.2s ease;
 }
 
@@ -163,10 +165,10 @@ body {
 .hero p {
     font-size: 1rem;
     font-weight: 400;
-    max-width: 350px;
+    /* max-width: 500px; */
     margin-bottom: 2rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-    opacity: 0.95;
+    opacity: 0.9;
 }
 
 .btn-primary {
@@ -315,7 +317,7 @@ body {
 
 /* --- About Us Section --- */
 .about-section {
-    padding: 2rem 1.5rem 3rem;
+    padding: 3rem 5rem 5rem;
     background-color: #f4f6fa;
 }
 
@@ -338,7 +340,7 @@ body {
     color: #555;
     font-size: 0.95rem;
     line-height: 1.7;
-    max-width: 380px;
+    max-width: 520px; /* Increased from 380px to make the text span 6 lines */
     margin: 0 auto;
 }
 .footer {
