@@ -12,6 +12,67 @@ body {
     color: #1a2a3a;
     line-height: 1.6;
 }
+/* Reset & Base Font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  background-color: #ffffff;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0b4a7d;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #0b74b8;
+}
+
+/* Active state underline on "Home" */
+.nav-links a.active {
+  color: #0b74b8;
+  border-bottom: 2px solid #0b74b8;
+}
+
+/* Pill-shaped "Book Now" button */
+.nav-links a.btn-book {
+  background-color: #0b74b8;
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 50px;
+  border-bottom: none;
+}
+
+.nav-links a.btn-book:hover {
+  background-color: #095d94;
+}
 
 .container {
     max-width: 480px;
@@ -256,6 +317,65 @@ body {
     line-height: 1.7;
     max-width: 380px;
     margin: 0 auto;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px;
+  background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-row {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333333;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: #0b74b8;
+}
+
+.footer-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-right p {
+  color: #333333;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.back-to-top {
+  text-decoration: none;
+  color: #0b4a7d;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.back-to-top:hover {
+  text-decoration: underline;
+}
+
+/* Smooth scrolling for "Back to Top" */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Responsive */
