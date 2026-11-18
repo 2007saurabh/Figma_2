@@ -12,42 +12,41 @@ body {
     color: #1a2a3a;
     line-height: 1.6;
 }
-/* Reset & Base Font */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 18px 60px;
-  background-color: #ffffff;
+  background-color: #f8f9fa;
+  padding: 20px 80px; /* Matches the wide outer spacing in the image */
+  width: 100%;
 }
 
+/* Brand Logo ("Wanderlust") */
 .logo {
-  font-size: 1.6rem;
+  font-size: 1.65rem;
   font-weight: 700;
-  color: #0b4a7d;
+  color: #064882; /* Deep navy blue */
   text-decoration: none;
+  letter-spacing: -0.5px;
 }
 
+/* Navigation List */
 .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 36px; /* Exact spacing between Home, About, Destinations, and Book Now */
 }
 
+/* Standard Nav Links */
 .nav-links a {
   text-decoration: none;
   color: #333333;
-  font-size: 1rem;
-  font-weight: 500;
-  padding-bottom: 4px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  padding-bottom: 6px;
   transition: color 0.2s ease;
 }
 
@@ -55,6 +54,29 @@ body {
   color: #0b74b8;
 }
 
+/* Active "Home" Link with Bottom Blue Line */
+.nav-links a.active {
+  color: #064882;
+  font-weight: 500;
+  border-bottom: 2px solid #0b74b8;
+}
+
+/* Pill-Shaped "Book Now" Button */
+.nav-links a.btn-book {
+  background-color: #0876bd; /* Bright ocean blue */
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 10px 28px;
+  border-radius: 999px; /* Full pill shape */
+  border-bottom: none;
+  margin-left: 12px; /* Extra breathing room before the button */
+  transition: background-color 0.2s ease;
+}
+
+.nav-links a.btn-book:hover {
+  background-color: #065d96;
+}
 /* Active state underline on "Home" */
 .nav-links a.active {
   color: #0b74b8;
@@ -85,17 +107,17 @@ body {
 /* --- Hero Section --- */
 .hero {
     position: relative;
-    height: min(560px, 100svh);
-    min-height: 460px;
+    height: min(500px, 100svh);
+    min-height: 1000px;
     background-image: url("assets/image.png");
     background-size: cover;
-    background-position: center 54%;
+    background-position: center 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 2rem;
+    padding: 0rem;
     color: #ffffff;
 }
 
@@ -108,9 +130,9 @@ body {
     height: 100%;
     background: linear-gradient(
         to bottom,
-        rgba(13, 35, 54, 0.38) 0%,
-        rgba(13, 35, 54, 0.16) 42%,
-        rgba(244, 246, 250, 0.12) 67%,
+        rgba(13, 35, 54, 0.45) 0%,
+        rgba(13, 35, 54, 0.25) 45%,
+        rgba(244, 246, 250, 0.65) 75%,
         #f4f6fa 100%
     );
     z-index: 1;
@@ -124,7 +146,8 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding-bottom: 1.5rem;
+    padding-top: 400px;
+    padding-bottom: 2.5rem;
 }
 
 .hero h1 {
@@ -175,7 +198,7 @@ body {
 
 /* --- Featured Destinations Section --- */
 .featured-section {
-    padding: 1.5rem 1.25rem 3rem;
+    padding: 500px 1.25rem 3rem;
     background-color: #f4f6fa;
 }
 
